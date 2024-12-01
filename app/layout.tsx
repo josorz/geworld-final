@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "GEWORLD Final Project",
@@ -30,12 +19,12 @@ export default function RootLayout({
     <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-4 shadow-sm">
   <div className="container mx-auto flex flex-row justify-between items-center px-4">
     {/* Logo and Title */}
-    <a href="/" className="flex items-center space-x-3">
+    <Link href='/'>
       <div>
         <h1 className="text-3xl font-semibold">Fake News Is Easy</h1>
         <p className="text-sm font-light">GEWORLD Final Project</p>
       </div>
-    </a>
+    </Link>
 
     {/* Navigation Links */}
     <nav className="flex items-center space-x-4">
@@ -66,7 +55,7 @@ export default function RootLayout({
 
     <footer className="bg-gray-800 text-white py-6">
       <div className="container mx-auto px-6 text-center">
-        <p>2024 | <a href='https://github.com/josorz'>github.com/josorz</a></p>
+        <p>2024 | <a href='https://github.com/josorz/geworld-final'>github.com/josorz</a></p>
       </div>
     </footer>
     </div>

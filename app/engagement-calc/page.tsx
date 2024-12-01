@@ -59,7 +59,7 @@ export default function Page() {
         </div>
         :
         <div>
-          <EngagementLoading content={result} isLoaded={isLoaded}/>
+          <EngagementLoading content={result}/>
           {
             isLoaded ?
             <button className="px-4 py-2 text-white bg-blue-500 rounded my-4" onClick={() => setShowResult(false)}>Try Again</button>

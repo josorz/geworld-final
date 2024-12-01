@@ -1,7 +1,5 @@
 "use client"
 
-import { useEffect, useState } from "react";
-
 const TweetInput = ({ account, tweet, setTweet, createEngagement } : { account: string, tweet: string, setTweet: any, createEngagement:any }) => {
   return (
     <form className="p-4 my-8 border border-gray-200 rounded-lg shadow-lg bg-white" onSubmit={(e) => createEngagement(e)}>

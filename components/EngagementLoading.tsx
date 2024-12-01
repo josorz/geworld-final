@@ -1,7 +1,7 @@
 import React from 'react';
 import EngagementReport from './EngagementReport';
 
-const EngagementLoading = ({ content, isLoaded }: { content: any, isLoaded: boolean }) => (
+const EngagementLoading = ({ content }: { content: any }) => (
   <div className="max-w-4xl mx-auto space-y-6">
     {content ? 
       <EngagementReport content={content}/>

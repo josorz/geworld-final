@@ -33,7 +33,7 @@ Example JSON output format:
 
 Now process the following tweet:`
 
-export async function POST(req: any, res:any) {
+export async function POST(req: any) {
     const { tweet } = await req.json()
 
     try {
@@ -43,7 +43,7 @@ export async function POST(req: any, res:any) {
       });
 
       // Get the raw response message
-      let responseMessage = response.choices[0].message.content?.toString() || ''
+      const responseMessage = response.choices[0].message.content?.toString() || ''
 
       // Parse and return the response
       return NextResponse.json({ success: true, response: JSON.parse(responseMessage) }, { status : 200 })

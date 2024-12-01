@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect , useState } from 'react';
+import React, { useState } from 'react';
 import TweetInput from '@/components/TweetInput';
 import SpinbotLoading from '@/components/SpinbotLoading';
 
@@ -38,15 +38,10 @@ export default function Page() {
         <div>
             <section className="p-4 bg-gray-200 rounded-lg">
                 <div className="flex items-center space-x-4">
-                <img
-                    src="https://via.placeholder.com/150"
-                    alt="Profile Picture"
-                    className="w-24 h-24 rounded-full"
-                />
                 <div>
                     <h1 className="text-2xl font-bold text-black">Spinbot</h1>
                     <p className="text-gray-600">@spinbot</p>
-                    <p className="mt-2 text-black">A simple statement, a straightforward clarification or a friendly 'good morning'? Think twice! GPT-4 can transform even the simplest statement into incendiary statements—mirroring social media at its finest!</p>
+                    <p className="mt-2 text-black">A simple statement, a straightforward clarification or a friendly &apos;good morning&apos;? Think twice! GPT-4 can transform even the simplest statement into incendiary statements—social media at its finest!</p>
                 </div>
                 </div>
                 <div className="flex space-x-6 mt-4 text-black">
@@ -58,7 +53,7 @@ export default function Page() {
         </div>
         :
         <div>
-          <SpinbotLoading content={result} isLoaded={isLoaded}/>
+          <SpinbotLoading content={result}/>
           {
             isLoaded ?
             <button className="px-4 py-2 text-white bg-blue-500 rounded my-4" onClick={() => setShowResult(false)}>Try Again</button>

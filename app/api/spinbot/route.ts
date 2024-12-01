@@ -55,7 +55,7 @@ const cleanResponse = (responseMessage : string) => {
   }
 };
 
-export async function POST(req: any, res:any) {
+export async function POST(req: any) {
     const { tweet } = await req.json()
 
     try {

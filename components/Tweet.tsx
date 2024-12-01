@@ -1,8 +1,5 @@
 'use client'
 
-import Image from "next/image";
-import { useState } from "react";
-
 const Tweet = ({ accountName, tweetContent } : {accountName: string | undefined, tweetContent: string | undefined}) => {
   return (
     <div className="max-w-lg mx-auto p-4 border border-gray-200 rounded-lg shadow-sm bg-white">
